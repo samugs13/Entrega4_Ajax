@@ -23,7 +23,7 @@ En el código proporcionado sólo está implementada la funcionalidad de listar 
 
 ## Acerca de myjson
 
-El servicio myjson permite almacenar información en formato JSON para poder acceder a ella desde cualquier cliente HTTP. Tiene tres endpoints:
+El servicio myjson permite almacenar información en formato JSON para poder acceder a ella desde cualquier cliente HTTP. Las acciones que pueden realizarse sobre los endpoints disponibles son las siguientes:
 
 | Método HTTP | URL                                | Descripción                                                                                                                                                                                          |
 |-------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
