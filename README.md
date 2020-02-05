@@ -19,6 +19,8 @@ Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se 
 </p>
 En el código proporcionado sólo está implementada la funcionalidad de listar las películas existentes y editar película. El alumno debe implementar las funcionalidades restantes (crear, mostrar, eliminar y reiniciar), así como las funciones que permiten leer y actualizar la información de myjson (``getAPI`` y ``updateAPI``).
 
+<br/>
+
 ## Acerca de myjson
 
 El servicio myjson permite almacenar información en formato JSON para poder acceder a ella desde cualquier cliente HTTP. Tiene tres endpoints:
