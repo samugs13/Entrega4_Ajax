@@ -15,9 +15,8 @@ Versión: 5 de Febrero de 2020
 Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se hace uso de la API de myjson (http://myjson.com/) para persistir la base de datos de películas. El resultado obtenido será el mismo que en la entrega 2, sólo que en lugar de almacenar la información de las películas utilizando la API de localStorage del navegador, se almacenará en myjson y estará accesible a través de la API REST que proporciona este servicio.
 
 <p align="center">
-  <img width="568" height="320" src="https://raw.githubusercontent.com/sonsoleslp/MVC_peliculas/master/files/enunciado.png">
+  <img width="568" height="320" src="https://raw.githubusercontent.com/CORE-2020/Entrega4_ajax/master/files/enunciado.png">
 </p>
-
 En el código proporcionado sólo está implementada la funcionalidad de listar las películas existentes y editar película. El alumno debe implementar las funcionalidades restantes (crear, mostrar, eliminar y reiniciar), así como las funciones que permiten leer y actualizar la información de myjson (``getAPI`` y ``updateAPI``).
 
 ## Acerca de myjson
@@ -35,7 +34,7 @@ El servicio myjson permite almacenar información en formato JSON para poder acc
 El proyecto debe clonarse en el ordenador desde el que se está trabajando:
 
 ```
-$ git clone https://github.com/sonsoleslp/Entrega4_ajax
+$ git clone https://github.com/CORE-2020/Entrega4_ajax
 ```
 A continuación se debe acceder al directorio de trabajo y abrir el fichero index.html con el editor de la elección del alumno.
 
