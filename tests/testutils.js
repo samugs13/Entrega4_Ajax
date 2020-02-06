@@ -120,7 +120,9 @@ TestUtils.mockFetch = async (browser) => {
     const mock = `function (URL, options)  {
         if (options && (options.method === "PUT") && options.body) {
             window["${id}"] = JSON.parse(options.body);
-            return true;
+            return new Promise(function(resolve, reject){
+                            resolve(true);
+                        });
         } else {
             return new Promise(function(resolve, reject){
                     resolve({ json: function(){ 
@@ -139,6 +141,7 @@ TestUtils.mockFetch = async (browser) => {
     browser.evaluate("try { window.fetch = " + mock + " } catch (err) {}");
     browser.evaluate("try { indexContr(); } catch (err) {}");
     await browser.wait({ duration: 200 });
+    return 0;
 };
 
 module.exports = TestUtils;
