@@ -3,7 +3,7 @@
 
 <br/><br/><br/>
 # Entrega 4 - MVC Películas AJAX
-Versión: 5 de Febrero de 2020
+Versión: 20 de Febrero de 2020
 
 ## Objetivos
 
@@ -12,12 +12,13 @@ Versión: 5 de Febrero de 2020
 
 ## Descripción de la práctica
 
-Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se hace uso de la API de myjson (http://myjson.com/) para persistir la base de datos de películas. El resultado obtenido será el mismo que en la entrega 2, sólo que en lugar de almacenar la información de las películas utilizando la API de localStorage del navegador, se almacenará en myjson y estará accesible a través de la API REST que proporciona este servicio.
+Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se hace uso de la API de myjson (http://myjson.com/) para persistir la base de datos de películas. El resultado obtenido será el mismo que en la entrega 2, sólo que en lugar de almacenar la información de las películas utilizando la API de localStorage del navegador, se almacenará remotamente en el servidor de myjson y estará accesible a través de la API REST que proporciona este servicio.
 
 <p align="center">
   <img width="568" height="320" src="https://raw.githubusercontent.com/CORE-2020/Entrega4_ajax/master/files/enunciado.png">
 </p>
-En el código proporcionado sólo está implementada la funcionalidad de listar las películas existentes y editar película. El alumno debe implementar las funcionalidades restantes (crear, mostrar, eliminar y reiniciar), así como las funciones que permiten leer y actualizar la información de myjson (``getAPI`` y ``updateAPI``).
+
+En el código proporcionado sólo está implementada la funcionalidad de listar las películas existentes y editar película. El alumno debe implementar las funcionalidades restantes (crear, mostrar, eliminar y reiniciar), así como las funciones que permiten leer y actualizar la información de myjson (`getAPI` y ``updateAPI``).
 
 <br/>
 
@@ -27,9 +28,9 @@ El servicio myjson permite almacenar información en formato JSON para poder acc
 
 | Método HTTP | URL                                | Descripción                                                                                                                                                                                          |
 |-------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| POST        | https://api.myjson.com/bins        | Crea un almacén nuevo para nuestra aplicación. Devuelve la URL que debemos utilizar como endpoint para guardar la información de nuestra aplicación. Por ejemplo: https://api.myjson.com/bins/ge9vy |
-| GET         | https://api.myjson.com/bins/ge9vy (la creada con el método POST) | Lee la información guardada en el endpoint creado                                                                                                                                                    |
-| PUT         | https://api.myjson.com/bins/ge9vy (la creada con el método POST) | Sobrescribe la información guardada en el endpoint creado con el JSON que se le pasa en el campo "body"                                                                                              |
+| POST        | https://api.myjson.com/bins        | Crea un almacén nuevo para nuestra aplicación. Devuelve la URL que debemos utilizar como endpoint para guardar la información de nuestra aplicación. Por ejemplo: https://api.myjson.com/bins/xxxxx |
+| GET         | https://api.myjson.com/bins/xxxxx (la creada con el método POST) | Lee la información guardada en el endpoint creado                                                                                                                                                    |
+| PUT         | https://api.myjson.com/bins/xxxxx (la creada con el método POST) | Sobrescribe la información guardada en el endpoint creado con el JSON que se le pasa en el campo "body" de la petición HTTP                                                                                             |
 
 ## Descargar el código del proyecto
 
@@ -38,13 +39,13 @@ El proyecto debe clonarse en el ordenador desde el que se está trabajando:
 ```
 $ git clone https://github.com/CORE-2020/Entrega4_ajax
 ```
-A continuación se debe acceder al directorio de trabajo y abrir el fichero index.html con el editor de la elección del alumno.
+A continuación se debe acceder al directorio de trabajo y abrir el fichero `index.html` con el editor de la elección del alumno.
 
 ```
 $ cd Entrega4_ajax
 ```
 
-El fichero index.html contiene el código de la aplicación. Incluye tanto el HTML de la página, como el CSS y el código JavaScript que implementa la lógica de la aplicación siguiendo el patrón MVC. La explicación del modelo y de cada vista y controlador puede encontrarse en el enunciado de la entrega 2. Para elaborar la solución de esta entrega puede reutilizar todo el código que considere conveniente de su solución de la entrega 2. Las funcionalidades a desarrollar son las mismas, sustituyendo el acceso a localStorage por la función correspondiente de comunicación con la API (``postAPI``, ``getAPI`` o ``updateAPI``).
+El fichero index.html contiene el código de la aplicación. Incluye tanto el HTML de la página, como el CSS y el código JavaScript que implementa la lógica de la aplicación siguiendo el patrón MVC. La explicación del modelo y de cada vista y controlador puede encontrarse en el enunciado de la entrega 2. Para elaborar la solución de esta entrega puede reutilizar todo el código que considere conveniente de su solución de la entrega 2. Las funcionalidades a desarrollar son las mismas, sustituyendo el acceso a localStorage por la función correspondiente de comunicación con la API ( ``postAPI``, ``getAPI`` o ``updateAPI`` ). Es decir, cambia la parte correspondiente al modelo (M) de la implementación de MVC realizada en la entrega 2.
 
 Cabe mencionar que, respecto al código de la entrega 2, se ha añadido un controlador nuevo (``initContr``), que se encarga de comprobar si el usuario ha creado ya un endpoint en myjson. Si no lo ha hecho, llama a la función ``postAPI`` que se encarga de crear dicho endpoint con las películas iniciales y lo guarda en la clave "URL" de localStorage. De esa manera, la próxima vez que el usuario acceda a la página, se podrá comprobar que el endpoint ya está creado y la información de las películas será accesible a través de él.
 
