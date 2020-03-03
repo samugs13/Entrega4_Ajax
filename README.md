@@ -12,7 +12,7 @@ Versión: 3 de Marzo de 2020
 
 ## Descripción de la práctica
 
-Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se hace uso de la API de myjson (http://myjson.dit.upm.es/) para persistir la base de datos de películas. El resultado obtenido será el mismo que en la entrega 2, sólo que en lugar de almacenar la información de las películas utilizando la API de localStorage del navegador, se almacenará remotamente en el servidor de myjson y estará accesible a través de la API REST que proporciona este servicio.
+Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se hace uso de la API de myjson (https://myjson.dit.upm.es/) para persistir la base de datos de películas. El resultado obtenido será el mismo que en la entrega 2, sólo que en lugar de almacenar la información de las películas utilizando la API de localStorage del navegador, se almacenará remotamente en el servidor de myjson y estará accesible a través de la API REST que proporciona este servicio.
 
 <p align="center">
   <img width="568" height="320" src="https://raw.githubusercontent.com/CORE-2020/Entrega4_ajax/master/files/enunciado.png">
