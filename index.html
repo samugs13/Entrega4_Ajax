@@ -46,7 +46,7 @@
 
         const postAPI = async (peliculas) => {
             try {
-                const res = await fetch("https://api.myjson.com/bins", {
+                const res = await fetch("https://myjson.dit.upm.es/api/bins", {
                   method: 'POST', 
                   headers:{
                       "Content-Type": "application/json",
@@ -153,7 +153,7 @@
         // CONTROLADORES 
 
         const initContr = async () => {
-            if (!localStorage.URL) {
+            if (!localStorage.URL || localStorage.URL === "undefined") {
                 localStorage.URL = await postAPI(mis_peliculas_iniciales);
             }
             indexContr();

@@ -12,7 +12,7 @@ Versión: 20 de Febrero de 2020
 
 ## Descripción de la práctica
 
-Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se hace uso de la API de myjson (http://myjson.com/) para persistir la base de datos de películas. El resultado obtenido será el mismo que en la entrega 2, sólo que en lugar de almacenar la información de las películas utilizando la API de localStorage del navegador, se almacenará remotamente en el servidor de myjson y estará accesible a través de la API REST que proporciona este servicio.
+Esta entrega es una modificación de la entrega 2 (MVC películas) en la que se hace uso de la API de myjson (http://myjson.dit.upm.es/) para persistir la base de datos de películas. El resultado obtenido será el mismo que en la entrega 2, sólo que en lugar de almacenar la información de las películas utilizando la API de localStorage del navegador, se almacenará remotamente en el servidor de myjson y estará accesible a través de la API REST que proporciona este servicio.
 
 <p align="center">
   <img width="568" height="320" src="https://raw.githubusercontent.com/CORE-2020/Entrega4_ajax/master/files/enunciado.png">
@@ -28,9 +28,9 @@ El servicio myjson permite almacenar información en formato JSON para poder acc
 
 | Método HTTP | URL                                | Descripción                                                                                                                                                                                          |
 |-------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| POST        | https://api.myjson.com/bins        | Crea un almacén nuevo para nuestra aplicación. Devuelve la URL que debemos utilizar como endpoint para guardar la información de nuestra aplicación. Por ejemplo: https://api.myjson.com/bins/xxxxx |
-| GET         | https://api.myjson.com/bins/xxxxx (la creada con el método POST) | Lee la información guardada en el endpoint creado                                                                                                                                                    |
-| PUT         | https://api.myjson.com/bins/xxxxx (la creada con el método POST) | Sobrescribe la información guardada en el endpoint creado con el JSON que se le pasa en el campo "body" de la petición HTTP                                                                                             |
+| POST        | https://myjson.com/api/bins        | Crea un almacén nuevo para nuestra aplicación. Devuelve la URL que debemos utilizar como endpoint para guardar la información de nuestra aplicación. Por ejemplo: http://myjson.com/api/bins/xxxxx |
+| GET         | https://myjson.com/api/bins/xxxxx (la creada con el método POST) | Lee la información guardada en el endpoint creado                                                                                                                                                    |
+| PUT         | https://myjson.com/api/bins/xxxxx (la creada con el método POST) | Sobrescribe la información guardada en el endpoint creado con el JSON que se le pasa en el campo "body" de la petición HTTP                                                                                             |
 
 ## Descargar el código del proyecto
 
