@@ -3,7 +3,7 @@
 
 <br/><br/><br/>
 # Entrega 4 - MVC Películas AJAX
-Versión: 20 de Febrero de 2020
+Versión: 3 de Marzo de 2020
 
 ## Objetivos
 
