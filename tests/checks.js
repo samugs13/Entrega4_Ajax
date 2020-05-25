@@ -61,19 +61,24 @@ describe("MVC_peliculas", function () {
         } else {
             [error_nav, resp] = await to(browser.visit(URL));
             if (error_nav) {
+
                 this.msg_err = `Error al abrir el fichero ${path_assignment}
                 Error: ${error_nav}
                 Recibido: ${browser.text('body')}`;
             }
+
             this.msg_err = "No se encuentra el botón con clase 'edit'";
             await Utils.mockFetch(browser);
-
-            [error_nav, resp] = await to(browser.click('.edit'));
-            if (error_nav) {
+            try {
+                [error_nav, resp] = await to(browser.click('.edit'));
+                this.msg_err = "No se encuentra el input con clase 'titulo'";
+                
+            } catch (e) {
                 this.msg_err = `Error al hacer click en el botón con clase 'edit'`;
             }
-            this.msg_err = "No se encuentra el input con clase 'titulo'";
-
+            if (error_nav, resp) {
+                this.msg_err = `Error al hacer click en el botón con clase 'edit'`;
+            }
             [error_nav, resp] = await to(browser.fill('#titulo', "Titanic7"));
             if (error_nav) {
                 this.msg_err = `Error al rellenar el campo de título`;
