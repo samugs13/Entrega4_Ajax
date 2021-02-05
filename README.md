@@ -58,6 +58,8 @@ En primer lugar, para no repetir el código de lectura/escritura en myjson a lo 
 
 - **updateAPI**: Realiza une petición asíncrona a la URL almacenada en ``localStorage.URL`` y escribe la información que se le pasa en el argumento "peliculas"
 
+**IMPORTANTE**: Las peticiones a la API pueden fallar, por ejemplo, si no hay conexión a Internet. Por ello es necesario envolver estas llamadas en un bloque try/catch.
+
 Una vez implementadas estas funciones, se pide modificar el código proporcionado para completar las cinco funcionalidades que faltan. Haga uso de las funciones ``getAPI`` y ``updateAPI``. Como se ha dicho, puede reutilizar todo el código que considere conveniente de su solución de la entrega 2:
 
 - **Show**: Mostrar información sobre la película. 
